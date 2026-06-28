@@ -109,13 +109,3 @@ pytest -q
 ```
 
 The validation script recomputes metrics from the stored confusion counts and checks that the subject partitions do not overlap.
-
-## Paper
-
-The compiled paper is available at:
-
-```text
-paper/IEEE_Paper_Christopher_Satya.pdf
-```
-
-It uses IEEE conference formatting and contains 11 pages. Evaluation units are kept separate: global/stagewise windows, face-module frames, and CITW images are never averaged into one synthetic overall score.
