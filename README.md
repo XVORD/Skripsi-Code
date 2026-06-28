@@ -1,4 +1,4 @@
-# Evidence-Aware Online Interview Proctoring
+# Spatio-Temporal Behavioral Modeling for Automated Proctoring in Online Interviews
 
 Clean research package for the final thesis and IEEE paper. The repository contains the final subject-split global model, learned-stagewise evaluation reports, paper figures, and the code needed to preprocess features, train models, evaluate modules, and generate a video demo.
 
