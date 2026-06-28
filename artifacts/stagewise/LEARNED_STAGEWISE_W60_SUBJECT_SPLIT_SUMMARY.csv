@@ -1,0 +1,3 @@
+target,name,test_windows,threshold,accuracy,precision,recall,f1_positive,f1_macro,tp,tn,fp,fn,train_windows,val_windows,split_manifest
+looking_away,LearnedTemporal-W60-NoStagewiseRules,794,0.6700000000000002,0.7695214105793451,0.5355450236966824,0.5707070707070707,0.5525672371638142,0.6986754760882684,113,498,98,85,3716,739,models/global_lstm_w60_normalized/split_manifest.json
+offscreen_gaze,LearnedTemporal-W60-NoStagewiseRules,794,0.9500000000000002,0.7544080604534005,0.6507936507936508,0.6051660516605166,0.627151051625239,0.7220262300379716,164,435,88,107,3716,739,models/global_lstm_w60_normalized/split_manifest.json

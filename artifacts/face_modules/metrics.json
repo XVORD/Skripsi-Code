@@ -1,0 +1,27 @@
+{
+  "face_present": {
+    "evaluation_set": "general_30000_frames",
+    "n": 30000,
+    "tp": 29050,
+    "tn": 114,
+    "fp": 216,
+    "fn": 620,
+    "accuracy": 0.9721333333,
+    "precision": 0.9926194219,
+    "recall": 0.9791034715,
+    "f1": 0.9858151215
+  },
+  "multiple_faces": {
+    "evaluation_set": "focused_940_frames",
+    "n": 940,
+    "tp": 563,
+    "tn": 259,
+    "fp": 43,
+    "fn": 75,
+    "accuracy": 0.8744680851,
+    "precision": 0.9290429043,
+    "recall": 0.8824451411,
+    "f1": 0.9051446945,
+    "note": "Focused positive-case supplement; not a 30,000-frame confusion matrix."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "evaluation": "subject_split_test",
+  "unit": "W60_window",
+  "n": 794,
+  "tn": 413,
+  "fp": 90,
+  "fn": 105,
+  "tp": 186,
+  "accuracy": 0.7544080605,
+  "macro_f1": 0.7325477149,
+  "suspicious_precision": 0.6739130435,
+  "suspicious_recall": 0.6391752577,
+  "suspicious_f1": 0.6560846561,
+  "threshold": 0.60,
+  "model": "one_layer_attention_lstm_w60_normalized"
+}

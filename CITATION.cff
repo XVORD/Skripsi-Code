@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "Evidence-Aware Stagewise Spatio-Temporal Modeling for Auditable Online Interview Proctoring"
+message: "Please cite the accompanying IEEE paper when using this research package."
+type: software
+authors:
+  - family-names: "Balakosa"
+    given-names: "Christopher Satya Fredella"
+affiliation: "Faculty of Computer Science, Universitas Indonesia"
+version: 2.0.0
+date-released: 2026-06-28

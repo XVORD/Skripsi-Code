@@ -1,0 +1,28 @@
+{
+  "provenance": "Reported external-device experiment in the final thesis and IEEE paper",
+  "dataset": "CITW v0.1 validation",
+  "detector_label_in_final_thesis": "YOLOv8",
+  "confidence_threshold": 0.20,
+  "iou_threshold": 0.50,
+  "image_level": {
+    "n": 1500,
+    "tp": 1395,
+    "tn": 65,
+    "fp": 15,
+    "fn": 25,
+    "accuracy": 0.9733,
+    "precision": 0.9894,
+    "recall": 0.9824,
+    "f1": 0.9859
+  },
+  "object_level": {
+    "n": 2300,
+    "tp": 2010,
+    "fp": 240,
+    "fn": 290,
+    "precision": 0.8933,
+    "recall": 0.8739,
+    "f1": 0.8835
+  },
+  "raw_predictions_in_repository": false
+}

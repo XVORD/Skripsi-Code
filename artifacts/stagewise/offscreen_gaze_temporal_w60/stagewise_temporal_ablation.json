@@ -1,0 +1,244 @@
+{
+    "config":  {
+                   "features_dir":  "\u003cprivate-feature-cache\u003e",
+                   "segments_csv":  "\u003cprivate-label-manifest\u003e",
+                   "output_dir":  "artifacts/stagewise/offscreen_gaze_temporal_w60",
+                   "split_manifest":  "models/global_lstm_w60_normalized/split_manifest.json",
+                   "targets":  [
+                                   "offscreen_gaze"
+                               ],
+                   "variant_mode":  "focused_stats",
+                   "epochs":  14,
+                   "seed":  42,
+                   "model_seed":  42,
+                   "label_mode":  "positive_ratio",
+                   "positive_ratio":  0.3,
+                   "min_window_known_ratio":  0.0,
+                   "threshold_metric":  "f1_positive",
+                   "positive_oversample":  3,
+                   "hard_negative_oversample":  2,
+                   "hard_negative_top_frac":  0.3,
+                   "label_smoothing":  0.0,
+                   "prob_smooth_span":  1,
+                   "feature_scale_std":  0.0,
+                   "time_jitter_prob":  0.0,
+                   "time_jitter_max":  0,
+                   "temporal_smooth_prob":  0.0,
+                   "focused_mask":  "no_stagewise_rules",
+                   "feature_standardized":  true,
+                   "train_videos":  [
+                                        "ai_assistance__p01_vid_001",
+                                        "ai_assistance__p02_vid_002",
+                                        "ai_assistance__p03_vid_003",
+                                        "ai_assistance__p06_vid_006",
+                                        "ai_assistance__p07_vid_007",
+                                        "ai_assistance__p09_vid_009",
+                                        "ai_assistance__p11_vid_011",
+                                        "ai_assistance__p12_vid_012",
+                                        "ai_assistance__p14_vid_014",
+                                        "ai_assistance__p15_vid_015",
+                                        "ai_assistance__p17_vid_017",
+                                        "ai_assistance__p18_vid_018",
+                                        "ai_assistance__p19_vid_019",
+                                        "ai_assistance__p20_vid_020",
+                                        "normal__p01_vid_001",
+                                        "normal__p02_vid_002",
+                                        "normal__p03_vid_003",
+                                        "normal__p06_vid_006",
+                                        "normal__p07_vid_007",
+                                        "normal__p09_vid_009",
+                                        "normal__p11_vid_011",
+                                        "normal__p12_vid_012",
+                                        "normal__p14_vid_014",
+                                        "normal__p15_vid_015",
+                                        "normal__p17_vid_017",
+                                        "normal__p18_vid_018",
+                                        "normal__p19_vid_019",
+                                        "normal__p20_vid_020",
+                                        "third_party__p01_vid_001",
+                                        "third_party__p02_vid_002",
+                                        "third_party__p03_vid_003",
+                                        "third_party__p06_vid_006",
+                                        "third_party__p07_vid_007",
+                                        "third_party__p09_vid_009",
+                                        "third_party__p11_vid_011",
+                                        "third_party__p12_vid_012",
+                                        "third_party__p14_vid_014",
+                                        "third_party__p15_vid_015",
+                                        "third_party__p17_vid_017",
+                                        "third_party__p18_vid_018",
+                                        "third_party__p19_vid_019",
+                                        "third_party__p20_vid_020"
+                                    ],
+                   "val_videos":  [
+                                      "ai_assistance__p08_vid_008",
+                                      "ai_assistance__p10_vid_010",
+                                      "ai_assistance__p13_vid_013",
+                                      "normal__p08_vid_008",
+                                      "normal__p10_vid_010",
+                                      "normal__p13_vid_013",
+                                      "third_party__p08_vid_008",
+                                      "third_party__p10_vid_010",
+                                      "third_party__p13_vid_013"
+                                  ],
+                   "test_videos":  [
+                                       "ai_assistance__p04_vid_004",
+                                       "ai_assistance__p05_vid_005",
+                                       "ai_assistance__p16_vid_016",
+                                       "normal__p04_vid_004",
+                                       "normal__p05_vid_005",
+                                       "normal__p16_vid_016",
+                                       "third_party__p04_vid_004",
+                                       "third_party__p05_vid_005",
+                                       "third_party__p16_vid_016"
+                                   ]
+               },
+    "results":  [
+                    {
+                        "accuracy":  0.7544080604534005,
+                        "precision":  0.6507936507936508,
+                        "recall":  0.6051660516605166,
+                        "f1_positive":  0.627151051625239,
+                        "f1_macro":  0.7220262300379716,
+                        "tp":  164,
+                        "tn":  435,
+                        "fp":  88,
+                        "fn":  107,
+                        "threshold":  0.9500000000000002,
+                        "name":  "LearnedTemporal-W60-NoStagewiseRules",
+                        "model":  "lstm_with_statistics",
+                        "target":  "offscreen_gaze",
+                        "window_size":  60,
+                        "window_seconds":  4.0,
+                        "stride":  30,
+                        "mask":  "no_stagewise_rules",
+                        "label_mode":  "positive_ratio",
+                        "train_windows":  3716,
+                        "train_windows_after_oversample":  7051,
+                        "val_windows":  739,
+                        "test_windows":  794,
+                        "val_loss":  1.0584838792016285,
+                        "test_loss":  1.15096582273392,
+                        "val_f1_macro_tuned":  0.612987012987013,
+                        "epochs":  14,
+                        "split_seed":  42,
+                        "model_seed":  42,
+                        "seconds":  248.88204097747803,
+                        "parameters":  244400,
+                        "input_size":  107,
+                        "feature_standardized":  true,
+                        "positive_oversample":  3,
+                        "hard_negative_oversample":  2,
+                        "hard_negative_top_frac":  0.3,
+                        "threshold_metric":  "f1_positive",
+                        "label_smoothing":  0.0,
+                        "prob_smooth_span":  1,
+                        "feature_scale_std":  0.0,
+                        "time_jitter_prob":  0.0,
+                        "time_jitter_max":  0,
+                        "temporal_smooth_prob":  0.0
+                    }
+                ],
+    "histories":  {
+                      "offscreen_gaze:LearnedTemporal-W60-NoStagewiseRules":  [
+                                                                            {
+                                                                                "epoch":  1,
+                                                                                "train_loss":  0.7352141574576736,
+                                                                                "val_loss":  0.7799484393432111,
+                                                                                "val_f1_macro":  0.6115702479338843,
+                                                                                "threshold":  0.8900000000000002
+                                                                            },
+                                                                            {
+                                                                                "epoch":  2,
+                                                                                "train_loss":  0.4740602260548212,
+                                                                                "val_loss":  1.0584838792016285,
+                                                                                "val_f1_macro":  0.612987012987013,
+                                                                                "threshold":  0.9500000000000002
+                                                                            },
+                                                                            {
+                                                                                "epoch":  3,
+                                                                                "train_loss":  0.35694191275911286,
+                                                                                "val_loss":  1.385294463218307,
+                                                                                "val_f1_macro":  0.6009615384615384,
+                                                                                "threshold":  0.9400000000000002
+                                                                            },
+                                                                            {
+                                                                                "epoch":  4,
+                                                                                "train_loss":  0.2750218837001428,
+                                                                                "val_loss":  1.7926866542018638,
+                                                                                "val_f1_macro":  0.5571725571725572,
+                                                                                "threshold":  0.9500000000000002
+                                                                            },
+                                                                            {
+                                                                                "epoch":  5,
+                                                                                "train_loss":  0.22481655468100978,
+                                                                                "val_loss":  1.5942805922402419,
+                                                                                "val_f1_macro":  0.5668934240362811,
+                                                                                "threshold":  0.9000000000000002
+                                                                            },
+                                                                            {
+                                                                                "epoch":  6,
+                                                                                "train_loss":  0.16655889572344543,
+                                                                                "val_loss":  1.9169195527475484,
+                                                                                "val_f1_macro":  0.5491329479768787,
+                                                                                "threshold":  0.9500000000000002
+                                                                            },
+                                                                            {
+                                                                                "epoch":  7,
+                                                                                "train_loss":  0.14378173579782175,
+                                                                                "val_loss":  2.0916002959779214,
+                                                                                "val_f1_macro":  0.528497409326425,
+                                                                                "threshold":  0.9400000000000002
+                                                                            },
+                                                                            {
+                                                                                "epoch":  8,
+                                                                                "train_loss":  0.10866352494945003,
+                                                                                "val_loss":  2.0479581043910593,
+                                                                                "val_f1_macro":  0.5301837270341208,
+                                                                                "threshold":  0.9300000000000002
+                                                                            },
+                                                                            {
+                                                                                "epoch":  9,
+                                                                                "train_loss":  0.10010161328283612,
+                                                                                "val_loss":  2.2513859117144017,
+                                                                                "val_f1_macro":  0.5215419501133787,
+                                                                                "threshold":  0.8600000000000002
+                                                                            },
+                                                                            {
+                                                                                "epoch":  10,
+                                                                                "train_loss":  0.08330684166849124,
+                                                                                "val_loss":  2.4484856736837446,
+                                                                                "val_f1_macro":  0.5212765957446809,
+                                                                                "threshold":  0.9200000000000003
+                                                                            },
+                                                                            {
+                                                                                "epoch":  11,
+                                                                                "train_loss":  0.09906540138649866,
+                                                                                "val_loss":  2.1073994284876307,
+                                                                                "val_f1_macro":  0.5739910313901345,
+                                                                                "threshold":  0.9500000000000002
+                                                                            },
+                                                                            {
+                                                                                "epoch":  12,
+                                                                                "train_loss":  0.06481892105987487,
+                                                                                "val_loss":  2.601720902690707,
+                                                                                "val_f1_macro":  0.4978723404255319,
+                                                                                "threshold":  0.8400000000000002
+                                                                            },
+                                                                            {
+                                                                                "epoch":  13,
+                                                                                "train_loss":  0.0637192235190824,
+                                                                                "val_loss":  2.0442727671908427,
+                                                                                "val_f1_macro":  0.5502392344497608,
+                                                                                "threshold":  0.9100000000000003
+                                                                            },
+                                                                            {
+                                                                                "epoch":  14,
+                                                                                "train_loss":  0.04420273377267976,
+                                                                                "val_loss":  2.446846940843275,
+                                                                                "val_f1_macro":  0.5471698113207547,
+                                                                                "threshold":  0.9500000000000002
+                                                                            }
+                                                                        ]
+                  }
+}

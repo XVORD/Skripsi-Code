@@ -1,0 +1,15 @@
+{
+  "evaluation": "subject_split_test_decision_support",
+  "unit": "W60_window",
+  "n": 794,
+  "tn": 401,
+  "fp": 102,
+  "fn": 62,
+  "tp": 229,
+  "accuracy": 0.7934508816,
+  "macro_f1": 0.7833,
+  "suspicious_precision": 0.6918429003,
+  "suspicious_recall": 0.7869415808,
+  "suspicious_f1": 0.7363344051,
+  "note": "Learned-stagewise probabilities are decision-support evidence; module metrics are not averaged."
+}

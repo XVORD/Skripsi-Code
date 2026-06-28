@@ -1,0 +1,81 @@
+system:
+  name: "Evidence-Aware Online Interview Proctoring"
+  version: "2.0.0"
+
+video:
+  fps: 15
+  width: 640
+  height: 480
+
+face_detection:
+  model: "mediapipe"
+  min_detection_confidence: 0.70
+  min_tracking_confidence: 0.50
+  max_num_faces: 3
+
+object_detection:
+  model: "models/object_detection/yolov8n.pt"
+  confidence_threshold: 0.20
+  target_classes: ["cell phone", "book", "laptop"]
+
+head_pose:
+  yaw_candidate_threshold: 30.0
+  pitch_candidate_threshold: 25.0
+  roll_candidate_threshold: 20.0
+
+eye_gaze:
+  fixation_threshold_pixels: 15.0
+  fixation_min_duration_ms: 200
+  saccade_velocity_threshold: 300.0
+  offscreen_candidate_threshold: 0.30
+  short_blink_suppress_seconds: 0.50
+
+temporal:
+  model_type: "lstm_attention"
+  input_size: 15
+  window_size: 60
+  stride: 30
+  hidden_size: 64
+  num_layers: 1
+  dropout: 0.45
+  normalize_per_video: true
+  label_mode: "majority"
+  model_path: "models/global_lstm_w60_normalized/checkpoint_best.pth"
+  normal_threshold: 0.30
+  suspicious_threshold: 0.60
+
+training:
+  split_unit: "subject"
+  seed: 7
+  train_subjects: 14
+  validation_subjects: 3
+  test_subjects: 3
+  epochs_completed: 63
+  checkpoint_monitor: "val_loss"
+  learning_rate_scheduler: "cosine"
+  weight_decay: 0.002
+  label_smoothing: 0.08
+  augment_noise_std: 0.025
+  augment_mask_prob: 0.45
+  augment_feature_dropout_prob: 0.12
+
+scoring:
+  # UI risk aggregation only; it is not the reported global test metric.
+  weights:
+    face_absent: 0.15
+    multiple_faces: 0.15
+    offscreen_gaze: 0.15
+    suspicious_object: 0.15
+    reading_pattern: 0.15
+    head_movement_anomaly: 0.10
+    response_latency: 0.10
+    temporal_anomaly: 0.05
+  thresholds:
+    warning: 0.30
+    suspicious: 0.60
+
+report:
+  output_dir: "demo/generated_outputs"
+  format: "json"
+  include_timeline: true
+  include_frames: true

@@ -1,0 +1,13 @@
+{
+  "test_loss": 0.7172829670930089,
+  "test_accuracy": 0.7544080604534005,
+  "test_f1_macro": 0.7325477149179402,
+  "best_val_f1": 0.7802691034753741,
+  "best_val_loss": 0.6110181739669235,
+  "monitor_metric": "val_loss",
+  "best_monitor_value": 0.6110181739669235,
+  "decision_threshold": 0.5999999999999998,
+  "val_f1_tuned_threshold": 0.7864586255259467,
+  "total_epochs": 63,
+  "label_mode": "majority"
+}
